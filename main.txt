@@ -19,7 +19,7 @@ async def on_message(message):
     import time
     await message.channel.send('loaded!', delete_after = 0.05)
     
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094441637740564/image0.gif', delete_after = 0.05) #if timing is off try 0.05 or 0.02, this timer in unsable.
+    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094441637740564/image0.gif', delete_after = 0.05)
     time.sleep(9.9)
     await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094449404674058/image0.gif', delete_after = 0.05)
     time.sleep(9.9)
