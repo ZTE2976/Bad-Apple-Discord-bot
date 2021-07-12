@@ -65,11 +65,8 @@ async def on_message(message):
     time.sleep(9.9)
     await message.channel.send('Finished.', delete_after = 5)
     time.sleep(5)
-
-  import random
-  rick_roll = ['https://tenor.com/view/together-foreverd-sike-bitch-you-just-got-together-foreverd-gif-21449028', 'https://media0.giphy.com/media/Ju7l5y9osyymQ/giphy.gif']
+    
   if message.content.startswith('!rickroll'):
-    await message.channel.send(random.choice(rick_roll), delete_after = 4.1)
-
+    await message.channel.send(('https://media0.giphy.com/media/Ju7l5y9osyymQ/giphy.gif'), delete_after = 4.1)
 
 client.run(os.getenv('TOKEN'))
