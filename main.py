@@ -63,7 +63,7 @@ async def on_message(message):
     time.sleep(9.9)
     await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094594280128512/image0.gif', delete_after = 0.05)
     time.sleep(9.9)
-    await message.channel.send('Finished, Coded by ZTE2976.', delete_after = 5)
+    await message.channel.send('Finished.', delete_after = 5)
     time.sleep(5)
 
   import random
