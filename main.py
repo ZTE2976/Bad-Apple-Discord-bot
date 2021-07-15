@@ -1,5 +1,6 @@
 import discord
 import os
+import time
 
 start = 0
 client = discord.Client()
@@ -16,7 +17,7 @@ async def on_message(message):
     
 
   if message.content.startswith('!bad apple'):
-    import time
+    
     await message.channel.send('loaded!', delete_after = 0.05)
     
     await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094441637740564/image0.gif', delete_after = 0.05)
