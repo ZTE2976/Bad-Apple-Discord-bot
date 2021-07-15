@@ -15,7 +15,13 @@ async def on_message(message):
   if message.author == client.user:
     return
     
-
+  if message.content.startswith('!help'):
+    embedVar = discord.Embed(title="Bad Apple bot help", description="Commands for the bot!", color=7241408)
+    embedVar.add_field(name="!bad apple", value=" - Plays the Bad Apple animation.", inline=False)
+    embedVar.add_field(name="!rickroll", value=" - Get rickrolled.", inline=False)
+    embedVar.add_field(name="!help", value=" - Commands list.", inline=False)
+    await message.channel.send(embed=embedVar)
+    
   if message.content.startswith('!bad apple'):
     
     await message.channel.send('loaded!', delete_after = 0.05)
