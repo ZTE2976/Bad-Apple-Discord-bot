@@ -5,6 +5,6 @@ Setting up the bot:
 The Bad Apple Discord bot runs using discord.py. Don't forget to change the token.env to your bots token. The first time loads slowly, try again after its loaded all of the GIFs and it should load faster.         
 
 Commands: 
-!bad apple - plays bad apple animation, !rickroll - get rickrolled, !help - Commands list, !ping - Bots latency (if the bot is lagging this an help see why).
+!bad apple - plays bad apple animation, !rickroll - get rickrolled, !help - Commands list, !ping - bots latency (if the bot is lagging this an help see why).
 
 Watch the bot running:   https://www.youtube.com/watch?v=qydSeXd5hhU
