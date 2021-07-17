@@ -20,6 +20,7 @@ async def on_message(message):
     embedVar.add_field(name="!bad apple", value=" - Plays the Bad Apple animation.", inline=False)
     embedVar.add_field(name="!rickroll", value=" - Get rickrolled.", inline=False)
     embedVar.add_field(name="!help", value=" - Commands list.", inline=False)
+    embedVar.add_field(name="!ping", value=" - Bots latency", inline=False)
     await message.channel.send(embed=embedVar)
     
   if message.content.startswith('!bad apple'):
@@ -75,5 +76,8 @@ async def on_message(message):
     
   if message.content.startswith('!rickroll'):
     await message.channel.send(('https://media0.giphy.com/media/Ju7l5y9osyymQ/giphy.gif'), delete_after = 4.1)
+    
+  if message.content.startswith('!ping'):
+    await message.channel.send(f'Pong!  {client.latency} ms')
 
 client.run(os.getenv('TOKEN'))
