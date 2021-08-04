@@ -75,7 +75,7 @@ async def on_message(message):
     time.sleep(5)
     
   if message.content.startswith('!rickroll'):
-    await message.channel.send(('https://media0.giphy.com/media/Ju7l5y9osyymQ/giphy.gif'), delete_after = 4.1)
+    await message.channel.send(('https://imgur.com/HdvWcB5'), delete_after = 211.5)
     
   if message.content.startswith('!ping'):
     await message.channel.send(f'Pong!  {client.latency} ms')
