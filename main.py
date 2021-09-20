@@ -74,6 +74,6 @@ async def on_message(message):
     await message.channel.send(('https://imgur.com/HdvWcB5'), delete_after = 211.5)
     
   if message.content.startswith('!ping'):
-    await message.channel.send(f'Pong!  {client.latency} ms')
+    await message.channel.send(f'Pong! {round(client.latency * 1000)} ms')
 
 client.run(os.getenv('TOKEN'))
