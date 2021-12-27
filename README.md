@@ -9,4 +9,4 @@ Commands:
 
 Watch the bot running:   https://www.youtube.com/watch?v=qydSeXd5hhU
 
-Invite the bot to your server:   https://top.gg/bot/860734283576115200
+Invite the bot to your server:   https://bad-apple.zte2976exe.repl.co
