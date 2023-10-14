@@ -19,4 +19,4 @@ You can watch the bot running in action on this YouTube video: [Watch the bot ru
 
 ## Invite the Bot to Your Server
 
-To add the Bad Apple bot to your server, follow this link: [Invite the bot to your server](https://bad-apple.zte2976exe.repl.co)
+To add the Bad Apple bot to your server, follow this link: [Invite the bot to your server](https://zte.repl.co/badapple)
