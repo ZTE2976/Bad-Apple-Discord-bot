@@ -48,4 +48,4 @@ async def rickroll(ctx: commands.Context):
     await ctx.send('https://imgur.com/HdvWcB5', delete_after=211.5)
 
 # Run the bot with your token
-bot.run(os.getenviron['TOKEN'])
+bot.run(os.environ['TOKEN'])
