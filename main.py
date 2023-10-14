@@ -17,10 +17,10 @@ async def on_ready():
 @bot.command()
 async def help(ctx: commands.Context):
     embed: discord.Embed = discord.Embed(title="Bad Apple Bot Help", description="Commands for the bot!", color=0x7241408)
-    embed.add_field(name="!bad apple", value="Plays the Bad Apple animation.", inline=False)
-    embed.add_field(name="!rickroll", value="Get rickrolled.", inline=False)
     embed.add_field(name="!help", value="Commands list.", inline=False)
     embed.add_field(name="!ping", value="Bot's latency", inline=False)
+    embed.add_field(name="!bad apple", value="Plays the Bad Apple animation.", inline=False)
+    embed.add_field(name="!rickroll", value="Get rickrolled.", inline=False)
     await ctx.send(embed=embed)
 
 # Define the ping command
