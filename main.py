@@ -1,79 +1,51 @@
-import discord
 import os
+import discord
+from discord.ext import commands
 import asyncio
 
-start = 0
-client = discord.Client()
+intents = discord.Intents.default()
+intents.message_content = True  # Enable the message intent
 
-@client.event
+bot: commands.Bot = commands.Bot(command_prefix='!', intents=intents)
+
+# Event to execute when the bot is ready
+@bot.event
 async def on_ready():
-  print('online: {0.user}'.format(client))
+    print(f'Logged in as {bot.user.name}')
 
-@client.event
-async def on_message(message):
+# Define a command for displaying help
+@bot.command()
+async def help(ctx: commands.Context):
+    embed: discord.Embed = discord.Embed(title="Bad Apple Bot Help", description="Commands for the bot!", color=0x7241408)
+    embed.add_field(name="!help", value="Commands list.", inline=False)
+    embed.add_field(name="!ping", value="Bot's latency", inline=False)
+    embed.add_field(name="!bad apple", value="Plays the Bad Apple animation.", inline=False)
+    embed.add_field(name="!rickroll", value="Get rickrolled.", inline=False)
+    await ctx.send(embed=embed)
 
-  if message.author == client.user:
-    return
-    
-  if message.content.startswith('!help'):
-    embedVar = discord.Embed(title="Bad Apple bot help", description="Commands for the bot!", color=7241408)
-    embedVar.add_field(name="!bad apple", value=" - Plays the Bad Apple animation.", inline=False)
-    embedVar.add_field(name="!rickroll", value=" - Get rickrolled.", inline=False)
-    embedVar.add_field(name="!help", value=" - Commands list.", inline=False)
-    embedVar.add_field(name="!ping", value=" - Bots latency", inline=False)
-    await message.channel.send(embed=embedVar)
-    
-  if message.content.startswith('!bad apple'):
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094441637740564/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094449404674058/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094456485969981/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094463267373116/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094471802650654/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094482653053008/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094488044044338/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094491169062932/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094498323890196/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094508151668756/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094514681413642/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094519731617802/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094523958951946/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094530992537632/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094541919879168/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094547631603743/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094554607648828/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094560709836820/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094570302341170/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094577236049980/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094585150832640/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('https://media.discordapp.net/attachments/858094390663839754/858094594280128512/image0.gif', delete_after = 9.9)
-    await asyncio.sleep(9.9)
-    await message.channel.send('Finished.', delete_after = 5)
-    
-  if message.content.startswith('!rickroll'):
-    await message.channel.send(('https://imgur.com/HdvWcB5'), delete_after = 211.5)
-    
-  if message.content.startswith('!ping'):
-    await message.channel.send(f'Pong! {round(client.latency * 1000)} ms')
+# Define the ping command
+@bot.command()
+async def ping(ctx: commands.Context):
+    latency: int = round(bot.latency * 1000)
+    await ctx.send(f'Pong! {latency} ms')
 
-client.run(os.getenv('TOKEN'))
+# Define the bad apple command
+@bot.command()
+async def bad_apple(ctx: commands.Context):
+    # Read Imgur URLs from a file
+    with open('bad_apple_urls.txt', 'r') as file:
+        urls = file.read().splitlines()
+    # Send URLs with a delay using asyncio
+    for url in urls:
+        await ctx.send(url, delete_after=9.9)
+        await asyncio.sleep(9.9)
+    # Send confirmation message
+    await ctx.send("Completed!")
+
+# Define the rickroll command
+@bot.command()
+async def rickroll(ctx: commands.Context):
+    await ctx.send('https://imgur.com/HdvWcB5', delete_after=211.5)
+
+# Run the bot with your token
+bot.run(os.environ['TOKEN'])

@@ -1,12 +1,22 @@
-# Bad-Apple-Discord-bot
+# Bad Apple Discord Bot
+
 A simple Discord bot that plays the Bad Apple animation.
 
-Setting up the bot:
-The Bad Apple Discord bot runs using discord.py, To add your bots token make an environment variable (.env) with the key as "TOKEN" and the value as your bots token. The first time loads slowly, try again after its loaded all of the GIFs and it should load faster.         
+## Setup
 
-Commands: 
-!bad apple - Plays bad apple animation, !rickroll - Get rickrolled, !help - Commands list, !ping - Bots latency (if the bot is lagging this can help see why).
+The Bad Apple Discord bot runs using discord.py. To add your bot's token, create an environment variable (e.g., a .env file) with the key as "TOKEN" and the value as your bot's token. The first time you use the bot, it may load slowly as it caches all of the GIFs. Subsequent usage should be faster.
 
-Watch the bot running:   https://www.youtube.com/watch?v=qydSeXd5hhU
+## Commands
 
-Invite the bot to your server:   https://bad-apple.zte2976exe.repl.co
+- `!help` - Display a list of available commands.
+- `!ping` - Check the bot's latency.
+- `!bad apple` - Plays the Bad Apple animation.
+- `!rickroll` - Get rickrolled.
+
+## Watch the Bot in Action
+
+You can watch the bot running in action on this YouTube video: [Watch the bot running](https://www.youtube.com/watch?v=qydSeXd5hhU)
+
+## Invite the Bot to Your Server
+
+To add the Bad Apple bot to your server, follow this link: [Invite the bot to your server](https://bad-apple.zte2976exe.repl.co)
